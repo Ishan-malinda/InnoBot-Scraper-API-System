@@ -1,4 +1,4 @@
-# 🤖 InnoBot Scraper & API System
+# 🤖 Scraper & API System
 
 A complete end-to-end data pipeline: **Scrape** (Python) → **Store** (Supabase) → **Serve** (Node.js).
 
@@ -43,7 +43,7 @@ graph TD
 - **Database**: Connects to Supabase using a **Transaction Pooler** (Port 6543). This bypasses common IPv6 network roadblocks.
 - **Resilience**: Features UTF-8 encoding configuration to handle special characters (smart quotes) without crashing in Windows terminals.
 
-### 2. The Backend (`innobot-backend/server.js`)
+### 2. The Backend (`backend/server.js`)
 - **Node.js + Express**: Serves the data stored in the database as a JSON API.
 - **Connection Pooling**: Efficiently manages multiple database connections to ensure stability.
 - **Security**: Handles SSL handshakes and environment variables for secure cloud connection.
@@ -69,7 +69,7 @@ python scrape_quotes.py
 ```
 
 ### Step 3: Backend API
-1. Navigate to `/innobot-backend`.
+1. Navigate to `/backend`.
 2. Create/update `.env` with your `DATABASE_URL`.
 3. Run the server:
 ```powershell
@@ -83,10 +83,13 @@ The API will be available at: [http://localhost:5001/api/patients](http://localh
 ## 📁 Project Structure
 
 ```text
-├── innobot-backend/
+├── backend/
 │   ├── .env               # Private database credentials
 │   ├── server.js          # Express API server
 │   └── package.json       # Node.js dependencies
+├── frontend/
+│   ├── app/               # Next.js frontend pages
+│   └── package.json       # Frontend dependencies
 ├── scrape_quotes.py       # Python Playwright scraper
 ├── .gitignore             # Excludes private/temp files
 └── README.md              # Project documentation

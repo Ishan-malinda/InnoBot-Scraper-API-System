@@ -38,14 +38,14 @@ app.get('/api/patients', async (req, res) => {
             detail: error.detail
         });
         res.status(500).json({ 
-            error: "Failed to fetch patient records",
+            error: "Failed to fetch records",
             details: error.message 
         });
     }
 });
 
 // Start the Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
     console.log(`🚀 Backend Server running on http://localhost:${PORT}`);
     console.log(`Test the API here: http://localhost:${PORT}/api/patients`);

@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-slate-50 p-10 font-sans text-gray-800">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2 text-blue-700">Scraped Quotes</h1>
+        <h1 className="text-3xl font-bold mb-2 text-blue-700">Database Dashboard</h1>
         <h2 className="text-xl mb-8 text-slate-500">Automated Data Retrieval</h2>
 
         <div className="bg-white shadow-lg rounded-xl overflow-hidden border border-slate-200">
